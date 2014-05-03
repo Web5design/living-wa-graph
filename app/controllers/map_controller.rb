@@ -1,11 +1,8 @@
 class MapController < ApplicationController
-	def fake_map
-		 respond_to |format| do
-		 	@product = {
-		 		hello: "world"
-		 	}
-            format.json {resp.to_json}
-            format.js
+    def fake_map
+        @geojson = {}
+         respond_to do |format|
+            format.json { @geojson.to_json }
         end
-	end
+    end
 end
