@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get '/fake_map.json' => 'map#fake_map'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
