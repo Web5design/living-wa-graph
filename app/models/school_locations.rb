@@ -1,5 +1,5 @@
 class SchoolLocations < ActiveResource::Base
-  self.site = 'http://opendata.socrata.com/'
+  self.site = 'http://data.seattle.gov/'
   self.element_name = "resource"
 
   def self.get_all
