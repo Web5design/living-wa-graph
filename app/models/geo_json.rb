@@ -1,4 +1,5 @@
-class GeoJson < ActiveRecord::Base
+class GeoJson < ActiveResource::Base
+
   def self.map
     '{  "type":"FeatureCollection",
   "features":[
@@ -13,4 +14,21 @@ class GeoJson < ActiveRecord::Base
   ]
 }'
   end
+
+  def self.counties
+    File.read("#{Rails.root}/app/models/datasets/Counties.geojson")
+  end
+
+  def self.state
+    File.read("#{Rails.root}/app/models/datasets/Counties.geojson")
+  end
+
+  def self.legislative_districts
+    File.read("#{Rails.root}/app/models/datasets/WALegislativeDistricts.geojson")
+  end
+
+  def self.school_districts
+    File.read("#{Rails.root}/app/models/datasets/WASchoolDistricts.geojson")
+  end
+
 end
