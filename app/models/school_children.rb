@@ -6,5 +6,4 @@ class SchoolChildren < ActiveResource::Base
   def self.get_all
     get("3ngx-mw5p")
   end
-
 end
