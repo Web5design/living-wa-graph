@@ -26,33 +26,3 @@
 </div>
 
 <div ng-view=""></div>
-<div class="row">
-	<div class="top-text col-md-12">
-		<%= render 'top_text' %>
-	</div>
-</div>
-
-<div class="row">
-	<div class="master-visualization col-md-12">
-		<%= render 'master_visualization' %>
-	</div>
-</div>
-
-<div class="row">
-	<div class="map col-md-8">
-		<div id="map-container" ng-controller="MapCtrl">
-			<choropleth class="details-full-size"
-			data="choroplethData"
-			disclaimer-message="pageTitle | mapDisclaimerFromPageTitle"
-			map-title="defaultChoroplethTitle"></choropleth>
-		</div>
-	</div>
-	<div class="side-panel col-md-4">
-		<%= render 'side_panel' %>
-	</div>
-</div>
-
-<div class="row">
-	<div class="footer col-md-12">
-	</div>
-</div>
