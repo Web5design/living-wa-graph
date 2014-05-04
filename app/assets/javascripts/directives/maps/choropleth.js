@@ -253,30 +253,30 @@ $scope.bounds = {
           return orderofMagnitudes2LegendLabel(order_range.lowerBound, order_range.upperBound);
         });
           
-          var legendEntries = d3.select(element.find('.legend')[0]).selectAll('.legendEntry')
-            .data(legendLabels)
+          // var legendEntries = d3.select(element.find('.legend')[0]).selectAll('.legendEntry')
+          //   .data(legendLabels)
 
-          legendEntries
-            .selectAll('.legendText')
-            .text(function(d) { return d; });
+          // legendEntries
+          //   .selectAll('.legendText')
+          //   .text(function(d) { return d; });
 
-          legendEntries
-            .selectAll('.legendKey')
-            .style('background', function(d, i) { return $scope.colors[i]; });
+          // legendEntries
+          //   .selectAll('.legendKey')
+          //   .style('background', function(d, i) { return $scope.colors[i]; });
 
-          var legendEntryDivs = legendEntries.enter()
-            .append('div')
-            .classed('legendEntry', true)
+          // var legendEntryDivs = legendEntries.enter()
+          //   .append('div')
+          //   .classed('legendEntry', true)
 
-          legendEntryDivs.append('span')
-            .style('background', function(d, i) { return $scope.colors[i]; })
-            .classed('legendKey', true);
+          // legendEntryDivs.append('span')
+          //   .style('background', function(d, i) { return $scope.colors[i]; })
+          //   .classed('legendKey', true);
 
-          legendEntryDivs.append('span')
-            .classed('legendText', true)
-            .text(function(d) { return d; } );
+          // legendEntryDivs.append('span')
+          //   .classed('legendText', true)
+          //   .text(function(d) { return d; } );
 
-          legendEntries.exit().remove();
+          // legendEntries.exit().remove();
 
       }); // $scope.$watch(...)
     }

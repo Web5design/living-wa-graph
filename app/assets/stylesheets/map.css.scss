@@ -14,7 +14,7 @@
 }
 
 .angular-leaflet-map {
-	min-width: 300px;
+	min-width: 400px;
 	min-height: 400px;
 }
 
@@ -131,7 +131,7 @@
 }
 
 $choropleth-right-pane-width: 300px;
-$choropleth-map-width: 75%;
+$choropleth-map-width: 100%;
 
 .choropleth-map-container {
   .angular-leaflet-map {

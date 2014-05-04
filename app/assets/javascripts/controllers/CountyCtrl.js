@@ -1,4 +1,4 @@
-app.controller('CountyCtrl', function($scope, $http, numberFormatter){
+app.controller('CountyCtrl', function($scope, $http, numberFormatter, geojsonMap){
   console.log('CountyCtrl');
   var formatCurrencyAmount = function(amount) {
         return numberFormatter.formatNumber(amount, {
@@ -8,20 +8,24 @@ app.controller('CountyCtrl', function($scope, $http, numberFormatter){
       };
 
  $scope.message = function(feature) {
-        var council_district_id = feature.properties.council_district_id,
-            project_count = feature.properties.project_count,
-            sum_fy_allocation = feature.properties.sum_fy_allocation;
-        var project_unit = ((project_count == 1) ? 'project' : 'projects');
-        var message =   '<strong>District ' + council_district_id + '</strong>'
-                      + '<br>'
-                      + '<div class="padding-top-sm">'
-                      +   '<span class="pull-left padding-right-md dark">' + project_count + ' ' + project_unit + '</span>'
-                      +   '<span class="pull-right map-popup-currency dark">' + formatCurrencyAmount(sum_fy_allocation) + '</span>'
-                      + '</div>';
+        var council_district_id = feature.properties.JURNM;
+        var message =   '<strong>' + council_district_id + '</strong>';
 
         return message;
       }
 
+   $scope.$on("leafletDirectiveMap.geojsonMouseover", function(ev, leafletEvent) {
+    console.log('mouseover');
+    geojsonMap.hover(leafletEvent);
+    
+    console.log($scope.districtName);
+  });
+
+  $scope.$on("leafletDirectiveMap.geojsonClick", function(ev, featureSelected, leafletEvent) {
+    console.log('click');
+    geojsonMap.click(leafletEvent);
+    $scope.districtName = leafletEvent.target.feature.properties.JURNM;
+  });
 
 
   $http.get('/county_map').then(function(result, status){
