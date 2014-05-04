@@ -4,7 +4,8 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
     scope: {
       data: '=',
       disclaimerMessage: '=',
-      mapTitle: '='
+      mapTitle: '=',
+      message: '='
     },
     templateUrl: '/templates/maps/choropleth.html',
     controller: function($scope) {
@@ -17,10 +18,15 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
 
       var $legend = $(element.find('.legend'));
 
-      $scope.bounds = leafletBoundsHelpers.createBoundsFromArray([
-        [85, 180], // NE map corner
-        [-85, -180] // SW map corner
-        ]);
+      // $scope.bounds = leafletBoundsHelpers.createBoundsFromArray([
+      //   [85, 180], // NE map corner
+      //   [-85, -180] // SW map corner
+      //   ]);
+// TODO: hardcoded
+$scope.bounds = {
+          northEast: { lat: 49.027437333000044, lng: -116.89024728799998 },
+          southWest: { lat: 45.518732361000026, lng: -124.885835668 }
+        }
 
       var formatCurrencyAmount = function(amount) {
         return numberFormatter.formatNumber(amount, {
@@ -93,7 +99,7 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
       $scope.mapPopups = {
         popupOnHover: true,
         position: 'outside',
-        message: message,
+        message: $scope.message,
         layerType: 'geojson',
         style: {
           weight: 5,
@@ -101,20 +107,6 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
         }
       };
 
-      function message(feature) {
-        var council_district_id = feature.properties.council_district_id,
-            project_count = feature.properties.project_count,
-            sum_fy_allocation = feature.properties.sum_fy_allocation;
-        var project_unit = ((project_count == 1) ? 'project' : 'projects');
-        var message =   '<strong>District ' + council_district_id + '</strong>'
-                      + '<br>'
-                      + '<div class="padding-top-sm">'
-                      +   '<span class="pull-left padding-right-md dark">' + project_count + ' ' + project_unit + '</span>'
-                      +   '<span class="pull-right map-popup-currency dark">' + formatCurrencyAmount(sum_fy_allocation) + '</span>'
-                      + '</div>';
-
-        return message;
-      }
 
 
 
@@ -155,10 +147,12 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
             maxLongitude = _.max(longitudes) + mapPadding;
 
         // set up map bounds (bounds directive)
-        $scope.bounds = leafletBoundsHelpers.createBoundsFromArray([
-          [maxLatitude, maxLongitude], // NE map corner
-          [minLatitude, minLongitude] // SW map corner
-        ]);
+        // $scope.bounds = leafletBoundsHelpers.createBoundsFromArray([
+        //   [maxLatitude, maxLongitude], // NE map corner
+        //   [minLatitude, minLongitude] // SW map corner
+        // ]);
+        
+        // TODO: hardcoded for WA
 
         console.log($scope.bounds);
 

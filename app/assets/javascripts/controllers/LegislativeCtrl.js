@@ -1,5 +1,20 @@
-app.controller('LegislativeCtrl', function($scope, $http){
+app.controller('LegislativeCtrl', function($scope, $http, numberFormatter){
   console.log('LegislativeCtrl');
+
+  var formatCurrencyAmount = function(amount) {
+        return numberFormatter.formatNumber(amount, {
+          currency: '$',
+          maxLength: 4
+        });
+      };
+
+  $scope.message = function(feature) {
+        var council_district_id = feature.properties.NAMELSAD10;
+        var message =   '<strong>' + council_district_id + '</strong>';
+
+        return message;
+      }
+
   $http.get('/legislative_map').then(function(result, status){
     $scope.choroplethData = result.data;
     console.log($scope.choroplethData);

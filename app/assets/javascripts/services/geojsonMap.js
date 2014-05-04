@@ -2,7 +2,7 @@ app.factory('geojsonMap', function() {
   // give map padding around points on the map, so circles are not bordering the map edges
   var geojsonMap = {};
 
-  geojsonMap.click = function(leafletEvent){
+  function click(e){
   	var layer = e.target;
 
     layer.setStyle({
@@ -17,7 +17,7 @@ app.factory('geojsonMap', function() {
     }
   }
 
-  geojsonMap.hover = function(leafletEvent){
+  function hover(e){
   	var layer = e.target;
 
     layer.setStyle({
@@ -31,5 +31,8 @@ app.factory('geojsonMap', function() {
         layer.bringToFront();
     }
   }
-  return geojsonMap;
+  return {
+    hover: hover,
+    click: click
+  };
 });
