@@ -12,10 +12,10 @@ class MapController < ApplicationController
     end
 
     def WAlegislative_districts
-        render json: GeoJson.WAlegislative_districts
+        render json: GeoJson.legislative_districts
     end
 
     def WAschool_districts
-        render json: GeoJson.WAschool_districts
+        render json: GeoJson.school_districts
     end
 end

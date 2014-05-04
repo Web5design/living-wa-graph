@@ -1,4 +1,4 @@
-app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, numberFormatter, templateHelper) {
+app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, numberFormatter) {
   return {
     restrict: 'E',
     scope: {
@@ -10,12 +10,12 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
     controller: function($scope) {
       $scope.defaults = mapConfiguration.defaultSettings();
       $scope.leafletCustomControls = mapConfiguration.defaultControls();
+      console.log('d3', d3);
     },
     link: function($scope, element, attrs) {
-      var templateParts = templateHelper.findTemplateParts(element, [
-        'legend']);
+      console.log(d3)
 
-      var $legend = templateParts.templated.$legend;
+      var $legend = $(element.find('.legend'));
 
       $scope.bounds = leafletBoundsHelpers.createBoundsFromArray([
         [85, 180], // NE map corner
@@ -256,8 +256,8 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
         var legendLabels = _.map(legendRangesByOrdersOfMagnitude, function(order_range) {
           return orderofMagnitudes2LegendLabel(order_range.lowerBound, order_range.upperBound);
         });
-
-          var legendEntries = d3.select($legend[0]).selectAll('.legendEntry')
+          
+          var legendEntries = d3.select(element.find('.legend')[0]).selectAll('.legendEntry')
             .data(legendLabels)
 
           legendEntries
