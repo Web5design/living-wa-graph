@@ -18,4 +18,5 @@ class MapController < ApplicationController
     def WAschool_districts
         render json: GeoJson.WAschool_districts
     end
+
 end

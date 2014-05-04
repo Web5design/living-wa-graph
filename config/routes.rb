@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :organizations
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,6 +12,10 @@ Rails.application.routes.draw do
   get 'fake_map' => 'map#counties'
   get 'fake_map' => 'map#WAlegislative_districts'
   get 'fake_map' => 'map#WAschool_districts'
+
+  resources 'homeless_stats' do
+    get 'families_with_minors', on: :collection
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

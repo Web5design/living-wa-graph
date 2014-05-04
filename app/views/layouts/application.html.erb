@@ -10,8 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="app">
-
-<%= yield %>
-
+    <%= render :partial => 'layouts/navigation' %>
+    <%= yield %>
 </body>
 </html>
