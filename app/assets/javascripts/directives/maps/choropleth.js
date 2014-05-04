@@ -160,6 +160,8 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
           [minLatitude, minLongitude] // SW map corner
         ]);
 
+        console.log($scope.bounds);
+
         $scope.geojson = {
             data: data,
             style: style,
