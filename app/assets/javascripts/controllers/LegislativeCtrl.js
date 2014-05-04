@@ -1,4 +1,4 @@
-app.controller('LegislativeCtrl', function($scope, $http, numberFormatter){
+app.controller('LegislativeCtrl', function($scope, $http, numberFormatter, geojsonMap){
   console.log('LegislativeCtrl');
 
   var formatCurrencyAmount = function(amount) {
@@ -14,6 +14,20 @@ app.controller('LegislativeCtrl', function($scope, $http, numberFormatter){
 
         return message;
       }
+
+
+  $scope.$on("leafletDirectiveMap.geojsonMouseover", function(ev, leafletEvent) {
+    console.log('mouseover');
+    geojsonMap.hover(leafletEvent);
+    
+  });
+
+  $scope.$on("leafletDirectiveMap.geojsonClick", function(ev, featureSelected, leafletEvent) {
+    console.log('click');
+    geojsonMap.click(leafletEvent);
+    $scope.districtName = leafletEvent.target.feature.properties.NAMELSAD10;
+  });
+
 
   $http.get('/legislative_map').then(function(result, status){
     $scope.choroplethData = result.data;

@@ -1,28 +1,31 @@
 <div class="row">
 	<div class="top-text col-md-12">
 		<p class="lead text-center">
-			County top text
+			Washington State is divided into 49 legislative districts. One Senator and two Representatives serve each district. Don't know your district? Find it <a href="http://app.leg.wa.gov/DistrictFinder/">here</a>! 
+			A component of the capital budget, the Housing Trust Fund is a critical funding source that organizations can use to build and preserve affordable housing. 
+			<br><br>
+			<small>Source: Washington State Department of Commerce</small>
 		</p>
 	</div>
 </div>
 
 <div class="row">
 	<div class="master-visualization col-md-12">
-		Master Vis goes here
+		<!-- Master Vis goes here -->
 	</div>
 </div>
 
 
 <div class="row">
-	<div class="map col-md-8" ng-controller="MapCtrl">
+	<div class="map col-md-6" ng-controller="MapCtrl">
 		<choropleth class="details-full-size"
                       data="choroplethData"
                       message="message"
                       disclaimer-message="pageTitle | mapDisclaimerFromPageTitle"
                       map-title="defaultChoroplethTitle"></choropleth>
 	</div>
-	<div class="map col-md-4">
-		Side Panel
+	<div class="map col-md-6">
+		<h2>{{districtName}}</h2>
 	</div>
 </div>
 

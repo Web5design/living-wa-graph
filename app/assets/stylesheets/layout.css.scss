@@ -3,7 +3,7 @@ body {
 	font-weight: 300;
 	background-color: white;
 	color: black;
-	padding: 0;
+	padding: 2em;
 	margin: 0;
 }
 
@@ -15,6 +15,12 @@ body {
 }
 
 
+h2 {
+    font-size: 20px;
+    color: darkred;
+    margin: 0;
+    padding-bottom: 1em;
+}
 .buttons {
 // TODO: fix spacing issue, instead of hack
     list-style: none;

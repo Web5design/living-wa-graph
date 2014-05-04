@@ -1,28 +1,29 @@
 <div class="row">
 	<div class="top-text col-md-12">
 		<p class="lead text-center">
-			County top text
+			Dig deeper to find more information by county, as well as data about the state’s number one tool for funding affordable homes: the Housing Trust Fund.
+
 		</p>
 	</div>
 </div>
 
 <div class="row">
 	<div class="text-center master-visualization col-md-12">
-		Master Vis goes here
+		<!-- Master Vis goes here -->
 	</div>
 </div>
 
 
 <div class="row">
-	<div class="map col-md-8" ng-controller="MapCtrl">
+	<div class="map col-md-6" ng-controller="MapCtrl">
 		<choropleth class="details-full-size"
                       data="choroplethData"
                       message="message"
                       disclaimer-message="pageTitle | mapDisclaimerFromPageTitle"
                       map-title="defaultChoroplethTitle"></choropleth>
 	</div>
-	<div class="map col-md-4">
-		Side Panel
+	<div class="map col-md-6">
+		<h2>{{districtName}}</h2>
 	</div>
 </div>
 

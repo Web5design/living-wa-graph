@@ -1,4 +1,4 @@
-app.controller('SchoolsCtrl', function($scope, $http, numberFormatter){
+app.controller('SchoolsCtrl', function($scope, $http, numberFormatter, geojsonMap){
   console.log('SchoolsCtrl');
 
   var formatCurrencyAmount = function(amount) {
@@ -22,6 +22,10 @@ app.controller('SchoolsCtrl', function($scope, $http, numberFormatter){
 
         return message;
       }
+
+
+  // TODO !!!!
+
 
   $http.get('/schools_map').then(function(result, status){
     $scope.choroplethData = result.data;
