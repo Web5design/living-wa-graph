@@ -1,4 +1,4 @@
-class SchoolChildren < ActiveResource::Base
+class FamiliesWithMinors < ActiveResource::Base
   self.site = 'http://opendata.socrata.com/'
   self.element_name = "resource"
 
@@ -9,9 +9,9 @@ class SchoolChildren < ActiveResource::Base
 private
   def self.__get_all(param=nil)
     if(param.nil?)
-      get("3ngx-mw5p")
+      get("k6e5-w7dp")
     else
-      get("3ngx-mw5p?#{param}")
+      get("k6e5-w7dp?#{param}")
     end
   end
 end
