@@ -19,8 +19,8 @@ class GeoJson < ActiveResource::Base
     File.read("#{Rails.root}/app/models/datasets/Counties.geojson")
   end
 
-  def self.state
-    File.read("#{Rails.root}/app/models/datasets/Counties.geojson")
+  def self.states
+    File.read("#{Rails.root}/app/models/datasets/State.geojson")
   end
 
   def self.legislative_districts
