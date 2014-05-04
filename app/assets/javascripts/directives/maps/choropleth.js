@@ -286,3 +286,4 @@ app.directive('choropleth', function(mapConfiguration, leafletBoundsHelpers, num
     }
   }
 });
+console.log('choropleth')

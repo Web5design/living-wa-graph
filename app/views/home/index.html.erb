@@ -1,7 +1,10 @@
-<div class="content" ng-controller="MainCtrl">
+<div id="map-container" ng-controller="MapCtrl">
 
 <h2>Map</h2>
 <map></map>
-
+<choropleth class="details-full-size"
+                      data="choroplethData"
+                      disclaimer-message="pageTitle | mapDisclaimerFromPageTitle"
+                      map-title="defaultChoroplethTitle"></choropleth>
 </div>
 

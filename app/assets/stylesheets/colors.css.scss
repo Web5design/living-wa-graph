@@ -1,0 +1,83 @@
+// Capex chunk colors
+$capex-child-1-background-color: #28683e;
+$capex-child-2-background-color: #2a5922;
+$capex-child-3-background-color: #1b7033;
+
+// Opex chunk colors
+$opex-child-1-background-color: #214a60;
+$opex-child-2-background-color: #315866;
+$opex-child-3-background-color: #2b4368;
+$opex-child-4-background-color: #346274;
+
+// Other chunk colors (homepage, about, etc)
+$about-child-1-background-color: #5f923a;
+$four-o-four-color: #0e746b;
+
+$budget-child-1-background-color: #096a73;
+
+$budget-child-2-background-color: #0e474a;
+$budget-child-2-totals-bar-color: #789a99;
+$budget-child-2-capex-chart-background-color: #093f32;
+
+$budget-child-3-background-color: #498a78;
+
+// Header
+$topnav_foreground: black;
+
+// Breadcrumbs
+$breadcrumbs-bg: #191b1f;
+
+// Miscellaneous colors TODO: organize.
+$app_color_background: #394b68;
+$app_color_background_neutral: #333;
+$app_color_foreground: white;
+$app_color_background_navigation: #405371;
+$app_color_barchart_bar: #8591a4;
+$app_color_background_darker: #334562;
+$app_color_flow_total: #FFD200;
+$app_color_flow_tax: #ff911b;
+$app_color_flow_local: #ff911b;
+$app_color_flow_nontax: #f4de43;
+$app_color_flow_nonlocal: #f4de43;
+$app_color_return_to_previous_band: #19ab62;
+$app_color_barchart_segment_tax: #ff911b;
+$app_color_barchart_segment_local: #ff911b;
+$app_color_barchart_segment_nontax: #f4de43;
+$app_color_barchart_segment_nonlocal: #f4de43;
+$app_color_scrollbar_thumb: #ddd;
+$totals_bar_main_color: #ffd200;
+$teal: #16808a;
+$turquoise: #1b8c72;
+$white: white;
+
+.teal {
+  color: $teal;
+  &.dark {
+    color: darken($teal, 40);
+  }
+}
+
+.turquoise {
+  color: $turquoise;
+  &.dark {
+    color: darken($turquoise, 40);
+  }
+}
+
+.white {
+  color: $white;
+  &.dark {
+    color: darken($white, 20);
+  }
+}
+
+.totals-bar-main-color {
+  color: $totals_bar_main_color;
+}
+
+.budget-child-1, .budget-child-2 { // about or intro
+  color: white;
+  a, a:visited {
+    color: white;
+  }
+}

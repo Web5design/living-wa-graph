@@ -1,3 +1,277 @@
-// Place all the styles related to the map controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+@mixin box-message {
+  background: $app_color_background_darker;
+  padding: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+// ------------- MAP ---------------
+
+.choropleth-map-container {
+    position: relative;
+}
+
+.angular-leaflet-map {
+	min-width: 300px;
+	min-height: 400px;
+}
+
+// ------------- MAP POPUPS ---------------
+
+.no_location_data_message {
+  background: $app_color_foreground;
+  padding: 4px 8px;
+  overflow: hidden;
+  border: 2px solid $app_color_background;
+  border-radius: 10px;
+  p {
+    white-space: pre-line;
+  }
+}
+
+.map-popup {
+  position: absolute;
+  display: none;
+  background: black;
+  color: white;
+  padding: 10px;
+  z-index: 9999999999;
+  &.markers {
+    background: none;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    // padding or margin styles can break mouse tracking on maps
+  }
+
+  .map-popup-currency {
+    margin-left: 50px;
+  }
+}
+
+// ----------- CUSTOM POPUP STYLES ----------
+
+.popup-title {
+  font-size: 15px;
+  line-height: 18px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.custom-pointer {
+  position: absolute;
+  bottom: -8px;
+  left: 46%;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom: none;
+  border-top-color: black;
+  opacity: 0.82;
+}
+
+.dark-map {
+  $bg-color: black;
+  $line-height: 1.2em;
+  $opacity: 0.82;
+
+  .leaflet-popup-tip {
+    border-top-color: black;
+    opacity: $opacity;
+  }
+  .leaflet-popup-tip-container{
+    // to prevent map popup flicker upon hovering over tip container
+    height: 0;
+  }
+
+  .leaflet-popup-content-wrapper {
+    font-size: 12px;
+    line-height: $line-height;
+    background-color: $bg-color;
+    opacity: $opacity;
+
+    .leaflet-popup-content {
+      background-color: $bg-color;
+      color: white;
+      margin: 1em;
+
+      .popup.title {
+        width: 74%;
+        @extend .popup-title;
+      }
+
+      .popup.currency {
+        width: 26%;
+        text-align: right;
+        @extend .popup-title;
+      }
+
+      .popup.description {
+        overflow: hidden;
+        height: $line-height * 4;
+      }
+    }
+  }
+
+  .leaflet-popup-close-button {
+    display: none;
+  }
+
+}
+
+// ----------- CHOROPLETH MAP STYLES ----------
+
+.choropleth-default {
+  // chlorophleth default styles go here
+  .leaflet-popup-content-wrapper {
+    width: 200px;
+  }
+}
+
+$choropleth-right-pane-width: 300px;
+$choropleth-map-width: 75%;
+
+.choropleth-map-container {
+  .angular-leaflet-map {
+    height: 93%;
+    max-width: $choropleth-map-width;
+  }
+
+  .leaflet-clickable {
+    cursor: inherit;
+  }
+
+  .right-pane {
+    position: absolute;
+    top: 0;
+    left: $choropleth-map-width;
+    width: 100% - $choropleth-map-width;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    max-width: $choropleth-right-pane-width;
+    min-width: 100px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1000px) {
+    $map-width: 60%;
+    .angular-leaflet-map {
+      width: $map-width;
+    }
+    .right-pane {
+      width: 100% - $map-width;
+      max-width: 100% - $map-width;
+      left: $map-width;
+    }
+  }
+
+  .map-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .disclaimer-message {
+    @include box-message;
+    position: absolute;
+    bottom: 20px;
+    max-height: 40%;
+  }
+
+  .legend {
+    display: inline-block;
+    line-height: 22px;
+    color: white;
+    .legendKey {
+      display: inline-block;
+      border: 2px solid #111;
+      border-radius: 0.4em;
+      height: 1.2em;
+      width: 1.2em;
+    }
+    .legendText {
+      margin-left: 1em;
+      position: relative;
+      top: -0.35em;
+    }
+  }
+}
+
+  .details-full-size .expense-category-map {
+    width: 78%;
+  }
+
+  $project-map-padding: 0;
+
+  .expense-category-map {
+    position: absolute;
+    bottom: $project-map-padding;
+    left: $project-map-padding;
+    right: 20%;
+    margin-right: 5px;
+    //width: 78%;
+    height: 93%;
+
+    .leaflet-popup-content-wrapper {
+      width: 300px;
+    }
+  }
+  .projects-map-legend {
+    .legend-circles {
+      border: solid 2px greenyellow;
+      opacity: 0.7;
+      background-color: green;
+      margin: 0 auto;
+    }
+
+    width: 20%;
+    float: right;
+
+    .legend-table {
+      width: 100%;
+      padding-left: $project-map-padding;
+
+      td {
+        vertical-align: bottom;
+        text-align: center;
+
+        > div:last-child {
+          padding-top: 4px;
+        }
+      }
+    }
+
+    .legend-message {
+      @include box-message;
+      margin-left: $project-map-padding;
+      margin-top: 15px;
+      // position at bottom, even if no projects were found.
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+.circle {
+  border-radius: 50%;
+}
+
+.map-title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  text-rendering: optimizeLegibility;
+}
+
+.angular-leaflet-map .leaflet-bar {
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+
+  a {
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+}
+

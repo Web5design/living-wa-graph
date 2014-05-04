@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  get 'fake_map' => 'map#fake_map'
+  get 'fake_map' => 'map#map'
+  get 'fake_map' => 'map#states'
+  get 'fake_map' => 'map#counties'
+  get 'fake_map' => 'map#WAlegislative_districts'
+  get 'fake_map' => 'map#WAschool_districts'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

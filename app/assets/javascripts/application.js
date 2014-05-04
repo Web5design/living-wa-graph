@@ -14,5 +14,9 @@
 //= require jquery_ujs
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require app
+//= require_tree ./leaflet-directives
+//= require_tree ./leaflet-services
+//= require_tree ./directives
+//= require_tree ./services
 //= require turbolinks
 //= require_tree .
