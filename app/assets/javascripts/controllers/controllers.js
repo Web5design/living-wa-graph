@@ -12,4 +12,6 @@ app.controller('MapCtrl', function($scope, $http){
       return b.total - a.total;
     });
   });
+
+  if (d3 == undefined || d3.selectAll == undefined) defineD3();
 });

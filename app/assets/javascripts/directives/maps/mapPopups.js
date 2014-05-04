@@ -6,7 +6,7 @@
 //     message: function that takes 1 argument as the leaflet layer object (= leafletEvent.target).
 //     layerType: string. 'geojson', 'circle', 'circleMarker', and 'marker' accepted.
 // }
-app.directive('mapPopups', function ($log, leafletHelpers, templateHelper) {
+app.directive('mapPopups', function ($log, leafletHelpers) {
     return {
         restrict: "A",
         scope: false,

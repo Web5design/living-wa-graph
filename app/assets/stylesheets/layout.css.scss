@@ -3,5 +3,64 @@ body {
 	font-weight: 300;
 	background-color: #696969;
 	color: white;
+	padding: 0;
+	margin: 0;
 }
 
+.text-center {
+	text-align: center;
+}
+.padded {
+	padding: 3em;
+}
+
+
+.buttons {
+// TODO: fix spacing issue, instead of hack
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    width: 505px;
+    padding: 2em;
+    margin-bottom: 5em;
+}
+
+div.header-text.col-md-12 {
+	// TODO: fix alignment
+    margin-left: -15px;
+    padding-bottom: 3em;
+}
+
+.buttons li {
+	$background-buttons: #ddd;
+    float: left;
+    position: relative;
+    a {
+    	position: relative;
+    	text-decoration: none;
+    	color: inherit;
+    	background: $background-buttons;
+	    color: black;
+	    padding: 1em;
+	    border: solid 1px #ddd;
+	    margin-right: 10px;
+	    cursor: pointer;
+	    &:hover {
+    	background: darken($background-buttons, 20);
+    }
+    }
+}
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

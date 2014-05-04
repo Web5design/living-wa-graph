@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'fake_map' => 'map#map'
-  get 'fake_map' => 'map#states'
-  get 'fake_map' => 'map#counties'
-  get 'fake_map' => 'map#WAlegislative_districts'
-  get 'fake_map' => 'map#WAschool_districts'
+  get 'state_map' => 'map#states'
+  get 'county_map' => 'map#counties'
+  get 'legislative_map' => 'map#WAlegislative_districts'
+  get 'schools_map' => 'map#WAschool_districts'
 
   resources 'homeless_stats' do
     get 'families_with_minors', on: :collection
