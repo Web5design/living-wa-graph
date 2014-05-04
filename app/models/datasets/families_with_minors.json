@@ -1,0 +1,361 @@
+[ {
+  "county" : "Clark County",
+  "total_homeless_individuals" : "1392",
+  "year" : "2007",
+  "families_with_minors" : "643"
+}
+, {
+  "county" : "Clark County",
+  "total_homeless_individuals" : "1062",
+  "year" : "2008",
+  "families_with_minors" : "557"
+}
+, {
+  "county" : "Clark County",
+  "total_homeless_individuals" : "1159",
+  "year" : "2009",
+  "families_with_minors" : "622"
+}
+, {
+  "county" : "Clark County",
+  "total_homeless_individuals" : "1093",
+  "year" : "2010",
+  "families_with_minors" : "604"
+}
+, {
+  "county" : "Clark County",
+  "total_homeless_individuals" : "834",
+  "year" : "2011",
+  "families_with_minors" : "435"
+}
+, {
+  "county" : "Clark County",
+  "total_homeless_individuals" : "977",
+  "year" : "2012",
+  "families_with_minors" : "585"
+}
+, {
+  "county" : "East Balance",
+  "total_homeless_individuals" : "1531",
+  "year" : "2007",
+  "families_with_minors" : "1050"
+}
+, {
+  "county" : "East Balance",
+  "total_homeless_individuals" : "1521",
+  "year" : "2008",
+  "families_with_minors" : "1068"
+}
+, {
+  "county" : "East Balance",
+  "total_homeless_individuals" : "1591",
+  "year" : "2009",
+  "families_with_minors" : "1024"
+}
+, {
+  "county" : "East Balance",
+  "total_homeless_individuals" : "1569",
+  "year" : "2010",
+  "families_with_minors" : "1053"
+}
+, {
+  "county" : "East Balance",
+  "total_homeless_individuals" : "1184",
+  "year" : "2011",
+  "families_with_minors" : "699"
+}
+, {
+  "county" : "East Balance",
+  "total_homeless_individuals" : "789",
+  "year" : "2012",
+  "families_with_minors" : "411"
+}
+, {
+  "county" : "King County",
+  "total_homeless_individuals" : "7902",
+  "year" : "2007",
+  "families_with_minors" : "2795"
+}
+, {
+  "county" : "King County",
+  "total_homeless_individuals" : "8501",
+  "year" : "2008",
+  "families_with_minors" : "2984"
+}
+, {
+  "county" : "King County",
+  "total_homeless_individuals" : "8997",
+  "year" : "2009",
+  "families_with_minors" : "3349"
+}
+, {
+  "county" : "King County",
+  "total_homeless_individuals" : "8978",
+  "year" : "2010",
+  "families_with_minors" : "3414"
+}
+, {
+  "county" : "King County",
+  "total_homeless_individuals" : "8874",
+  "year" : "2011",
+  "families_with_minors" : "3469"
+}
+, {
+  "county" : "King County",
+  "total_homeless_individuals" : "8858",
+  "year" : "2012",
+  "families_with_minors" : "3151"
+}
+, {
+  "county" : "North Sound",
+  "total_homeless_individuals" : "2167",
+  "year" : "2007",
+  "families_with_minors" : "1082"
+}
+, {
+  "county" : "North Sound",
+  "total_homeless_individuals" : "1476",
+  "year" : "2008",
+  "families_with_minors" : "760"
+}
+, {
+  "county" : "North Sound",
+  "total_homeless_individuals" : "1931",
+  "year" : "2009",
+  "families_with_minors" : "953"
+}
+, {
+  "county" : "North Sound",
+  "total_homeless_individuals" : "1946",
+  "year" : "2010",
+  "families_with_minors" : "1046"
+}
+, {
+  "county" : "North Sound",
+  "total_homeless_individuals" : "1347",
+  "year" : "2011",
+  "families_with_minors" : "652"
+}
+, {
+  "county" : "North Sound",
+  "total_homeless_individuals" : "1203",
+  "year" : "2012",
+  "families_with_minors" : "469"
+}
+, {
+  "county" : "Other Puget Sound Metro",
+  "total_homeless_individuals" : "679",
+  "year" : "2007",
+  "families_with_minors" : "325"
+}
+, {
+  "county" : "Other Puget Sound Metro",
+  "total_homeless_individuals" : "901",
+  "year" : "2008",
+  "families_with_minors" : "281"
+}
+, {
+  "county" : "Other Puget Sound Metro",
+  "total_homeless_individuals" : "1264",
+  "year" : "2009",
+  "families_with_minors" : "538"
+}
+, {
+  "county" : "Other Puget Sound Metro",
+  "total_homeless_individuals" : "1361",
+  "year" : "2010",
+  "families_with_minors" : "471"
+}
+, {
+  "county" : "Other Puget Sound Metro",
+  "total_homeless_individuals" : "894",
+  "year" : "2011",
+  "families_with_minors" : "358"
+}
+, {
+  "county" : "Other Puget Sound Metro",
+  "total_homeless_individuals" : "1080",
+  "year" : "2012",
+  "families_with_minors" : "472"
+}
+, {
+  "county" : "Pierce County",
+  "total_homeless_individuals" : "1596",
+  "year" : "2007",
+  "families_with_minors" : "936"
+}
+, {
+  "county" : "Pierce County",
+  "total_homeless_individuals" : "1743",
+  "year" : "2008",
+  "families_with_minors" : "990"
+}
+, {
+  "county" : "Pierce County",
+  "total_homeless_individuals" : "2083",
+  "year" : "2009",
+  "families_with_minors" : "1335"
+}
+, {
+  "county" : "Pierce County",
+  "total_homeless_individuals" : "1807",
+  "year" : "2010",
+  "families_with_minors" : "1110"
+}
+, {
+  "county" : "Pierce County",
+  "total_homeless_individuals" : "2085",
+  "year" : "2011",
+  "families_with_minors" : "1243"
+}
+, {
+  "county" : "Pierce County",
+  "total_homeless_individuals" : "1997",
+  "year" : "2012",
+  "families_with_minors" : "1310"
+}
+, {
+  "county" : "Snohomish County",
+  "total_homeless_individuals" : "2196",
+  "year" : "2007",
+  "families_with_minors" : "1257"
+}
+, {
+  "county" : "Snohomish County",
+  "total_homeless_individuals" : "2154",
+  "year" : "2008",
+  "families_with_minors" : "1091"
+}
+, {
+  "county" : "Snohomish County",
+  "total_homeless_individuals" : "2356",
+  "year" : "2009",
+  "families_with_minors" : "1193"
+}
+, {
+  "county" : "Snohomish County",
+  "total_homeless_individuals" : "2018",
+  "year" : "2010",
+  "families_with_minors" : "1213"
+}
+, {
+  "county" : "Snohomish County",
+  "total_homeless_individuals" : "1860",
+  "year" : "2011",
+  "families_with_minors" : "1030"
+}
+, {
+  "county" : "Snohomish County",
+  "total_homeless_individuals" : "2047",
+  "year" : "2012",
+  "families_with_minors" : "1155"
+}
+, {
+  "county" : "Spokane County",
+  "total_homeless_individuals" : "1187",
+  "year" : "2007",
+  "families_with_minors" : "425"
+}
+, {
+  "county" : "Spokane County",
+  "total_homeless_individuals" : "1370",
+  "year" : "2008",
+  "families_with_minors" : "371"
+}
+, {
+  "county" : "Spokane County",
+  "total_homeless_individuals" : "1229",
+  "year" : "2009",
+  "families_with_minors" : "556"
+}
+, {
+  "county" : "Spokane County",
+  "total_homeless_individuals" : "1038",
+  "year" : "2010",
+  "families_with_minors" : "423"
+}
+, {
+  "county" : "Spokane County",
+  "total_homeless_individuals" : "1275",
+  "year" : "2011",
+  "families_with_minors" : "630"
+}
+, {
+  "county" : "Spokane County",
+  "total_homeless_individuals" : "1185",
+  "year" : "2012",
+  "families_with_minors" : "523"
+}
+, {
+  "county" : "West Balance",
+  "total_homeless_individuals" : "1819",
+  "year" : "2007",
+  "families_with_minors" : "882"
+}
+, {
+  "county" : "West Balance",
+  "total_homeless_individuals" : "1819",
+  "year" : "2008",
+  "families_with_minors" : "1000"
+}
+, {
+  "county" : "West Balance",
+  "total_homeless_individuals" : "1357",
+  "year" : "2009",
+  "families_with_minors" : "683"
+}
+, {
+  "county" : "West Balance",
+  "total_homeless_individuals" : "1836",
+  "year" : "2010",
+  "families_with_minors" : "986"
+}
+, {
+  "county" : "West Balance",
+  "total_homeless_individuals" : "1265",
+  "year" : "2011",
+  "families_with_minors" : "792"
+}
+, {
+  "county" : "West Balance",
+  "total_homeless_individuals" : "1361",
+  "year" : "2012",
+  "families_with_minors" : "625"
+}
+, {
+  "county" : "Yakima-Tri Cities",
+  "total_homeless_individuals" : "1365",
+  "year" : "2007",
+  "families_with_minors" : "701"
+}
+, {
+  "county" : "Yakima-Tri Cities",
+  "total_homeless_individuals" : "1370",
+  "year" : "2008",
+  "families_with_minors" : "828"
+}
+, {
+  "county" : "Yakima-Tri Cities",
+  "total_homeless_individuals" : "827",
+  "year" : "2009",
+  "families_with_minors" : "442"
+}
+, {
+  "county" : "Yakima-Tri Cities",
+  "total_homeless_individuals" : "940",
+  "year" : "2010",
+  "families_with_minors" : "497"
+}
+, {
+  "county" : "Yakima-Tri Cities",
+  "total_homeless_individuals" : "601",
+  "year" : "2011",
+  "families_with_minors" : "309"
+}
+, {
+  "county" : "Yakima-Tri Cities",
+  "total_homeless_individuals" : "839",
+  "year" : "2012",
+  "families_with_minors" : "401"
+}
+ ]

@@ -15,6 +15,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+gem 'bootstrap-sass'
+gem 'haml-rails'
+
 gem 'rails_12factor', group: :production
 
 # Use jquery as the JavaScript library
@@ -32,7 +35,9 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'activeresource'
+gem 'activeresource', :require => 'active_resource'
+
+gem 'rest-client', :require => 'rest_client'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -42,4 +47,3 @@ gem 'activeresource'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

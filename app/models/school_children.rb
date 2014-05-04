@@ -1,17 +1,17 @@
-class SchoolChildren < ActiveResource::Base
-  self.site = 'http://opendata.socrata.com/'
-  self.element_name = "resource"
+class SchoolChildren < OpenDataRest
+  @@site = 'http://opendata.socrata.com/resource/3ngx-mw5p.json'
 
-  def self.get_all
-    __get_all
-  end
+  class << self
 
-private
-  def self.__get_all(param=nil)
-    if(param.nil?)
-      get("3ngx-mw5p")
-    else
-      get("3ngx-mw5p?#{param}")
+    def regions
+      query = "#{@@site}?$select=regions"
+      get query
     end
+
+    def homeless_count_statewide
+      query = "#{@@site}?$select=sum(homeless_totals)"
+      JSON.parse(get(query))[0]["sum_homeless_totals"]
+    end
+
   end
 end
